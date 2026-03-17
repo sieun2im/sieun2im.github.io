@@ -1,1 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>몽글몽글 개발 로그 ☁️</title>
+    <style>
+        /* 기본 폰트 및 배경 설정 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Pretendard', sans-serif;
+            background-color: #fff9fb; /* 연한 핑크빛 배경 */
+            color: #444;
+        }
 
+        /* 전체 레이아웃 구성을 위한 컨테이너 */
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 50px auto;
+            gap: 30px;
+            padding: 0 20px;
+        }
+
+        /* 왼쪽 사이드바: 내 프로필 */
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(255, 182, 193, 0.2);
+            height: fit-content;
+            text-align: center;
+            border: 2px solid #ffecf2;
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            background-color: #ffd1dc;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #ff85a1;
+        }
+
+        .sidebar p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #888;
+        }
+
+        /* 오른쪽 메인: 게시글 목록 */
+        .main-content {
+            flex: 2.5;
+        }
+
+        .post-card {
+            background: white;
+            margin-bottom: 20px;
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s ease;
+            border-left: 8px solid #ffd1dc;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-category {
+            display: inline-block;
+            background: #ffe4e1;
+            color: #ff6b81;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .post-card h3 {
+            margin: 0 0 10px 0;
+            color: #333;
+        }
+
+        .post-card p {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* 귀여운 버튼 스타일 */
+        .btn-more {
+            background: #ff85a1;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .btn-more:hover {
+            background: #ff6b81;
+        }
+
+        /* 반응형 설정 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-img">👩‍💻</div>
+            <h2>코딩하는 솜사탕</h2>
+            <p>10년차 개발자의 달콤한<br>자바스크립트 이야기 공간이에용!</p>
+            <hr style="border: 0.5px solid #eee; margin: 20px 0;">
+            <p style="font-size: 0.8rem;">📍 Seoul, Korea<br>✉️ hello@lms.com</p>
+        </aside>
+
+        <main class="main-content">
+            <h1 style="color: #ff85a1; margin-bottom: 30px;">최근 기록들 📝</h1>
+
+            <article class="post-card">
+                <span class="post-category">JavaScript</span>
+                <h3>배열 함수로 LMS 로그인 구현하기</h3>
+                <p>find()와 some() 함수만 있으면 복잡한 로그인 로직도 뚝딱! localStorage를 활용한 회원가입 시스템 구축기를 담았어용...</p>
+                <button class="btn-more">읽어보기</button>
+            </article>
+
+            <article class="post-card">
+                <span class="post-category">React.js</span>
+                <h3>리액트 컴포넌트 예쁘게 꾸미는 팁</h3>
+                <p>사용자 경험을 높여주는 아기자기한 UI 디자인 가이드! 둥근 모서리와 파스텔 톤의 조화를 어떻게 찾을까용?</p>
+                <button class="btn-more">읽어보기</button>
+            </article>
+
+            <article class="post-card">
+                <span class="post-category">Life</span>
+                <h3>10년차 개발자의 생산성 도구</h3>
+                <p>매일 사용하는 VS Code 테마부터 유용한 익스텐션까지, 제가 아끼는 도구들을 소개할게용!</p>
+                <button class="btn-more">읽어보기</button>
+            </article>
+        </main>
+    </div>
+
+</body>
+</html>
